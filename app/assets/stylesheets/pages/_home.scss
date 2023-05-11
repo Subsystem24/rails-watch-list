@@ -1,0 +1,31 @@
+// Specific CSS for your home-page
+.title{
+  text-align: center;
+  padding: 150px;
+  font-weight: bolder;
+  color: white;
+}
+
+.grid{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 8px;
+}
+
+.banner{
+  background-image: url(https://pixelz.cc/wp-content/uploads/2019/01/sonic-the-hedgehog-movie-uhd-4k-wallpaper.jpg);
+  background-size: cover;
+  background-position-y: 25% ;
+}
+
+.navbar-lewagon .list_button {
+  display: flex;
+  justify-content: space-between;
+  width: 150px;
+  font: 50px;
+  a{
+    text-decoration: none;
+    color: black;
+  }
+}

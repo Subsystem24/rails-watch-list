@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="navbar-lewagon">
+    <%= image_tag "logo.png", alt: "Le Wagon", width: 150, height: 40 %>
+    <div class="list_button">
+      <p class="mb-0 align-self-center"><%= link_to "My Lists", lists_path%></p>
+      <p class="mb-0 align-self-center"><%= link_to "New list", new_list_path%></p>
+    </div>
+  </div>
+
+  <div class="banner">
+    <h2 class="title">Save any kind of movies</h2>
+  </div>
+    <div class="navbar-lewagon">
+    <h3>My Lists</h3>
+      <%= link_to "Create a movie list", new_list_path, class: "btn btn-dark" %>
+    </div>
+
+    <div class="grid">
+    <% @lists.each do |list| %>
+    <%= link_to list_path(list), class: "text-decoration-none" do %>
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+      <%= list.name %>
+    </div>
+  <% end %>
+<% end %>
+</div>
+</div>
+<%# <h1></h1> %>
