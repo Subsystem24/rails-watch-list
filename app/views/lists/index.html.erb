@@ -19,7 +19,6 @@
     <% @lists.each do |list| %>
     <%= link_to list_path(list), class: "text-decoration-none" do %>
     <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= list.photo.attached? ? (cl_image_path list.photo.key) : "http://loremflickr.com/300/260/cocktail" %>)">
-      width: 400, height: 300, crop: :fill)">
       <%= list.name.capitalize %>
     </div>
   <% end %>
