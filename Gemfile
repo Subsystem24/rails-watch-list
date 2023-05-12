@@ -23,6 +23,9 @@ gem "jsbundling-rails"
 # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
 gem "turbo-rails"
 
+gem "simple_form"
+gem "sassc-rails"
+
 
 gem 'cloudinary', '~> 1.16.0'
 
