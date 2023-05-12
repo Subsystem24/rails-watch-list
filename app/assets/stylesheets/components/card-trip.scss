@@ -34,8 +34,9 @@
   padding: 16px;
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
   position: relative;
+  height: 200px;
+  align-content: space-between;
 }
 
 .card-trip-infos .card-trip-user {
@@ -43,4 +44,25 @@
   right: 16px;
   top: -20px;
   width: 40px;
+}
+
+.card-trip-pricing{
+  display: flex;
+  align-items: flex-end;
+}
+
+#title{
+
+}
+
+#description{
+
+}
+
+#comment{
+
+}
+
+.movie-description{
+  align-content: space-around;
 }
