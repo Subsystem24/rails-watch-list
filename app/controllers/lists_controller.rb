@@ -25,7 +25,7 @@ class ListsController < ApplicationController
 
   def list_params
     # this info is coming from the form
-    params.require(:list).permit(:name)
+    params.require(:list).permit(:name, :photo)
   end
 
   def set_list
