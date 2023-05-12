@@ -7,9 +7,14 @@
     </div>
   </div>
 
-  <div class="banner">
-      <h2 class="title"><%= @list.name.capitalize %></h2>
+  <div class="banner-list" style="position: relative;">
+  <%= cl_image_tag @list.photo.key, alt: "@list image", class: 'anthing_you_want', style: "position: absolute; top: 0; left: 0; z-index: -1; width: 100%; height: 100%;" %>
+  <div style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)); height: 100%;">
+    <h2 class="title"><%= @list.name.capitalize %></h2>
   </div>
+</div>
+
+
   <div class="navbar-lewagon">
     <h3><%= @list.name.capitalize %> movie list</h3>
     <%= link_to "Add a movie",  new_list_bookmark_path(@list), class: "btn btn-dark" %>
@@ -24,12 +29,12 @@
   <% if !@list.bookmarks.empty? %>
     <% @list.bookmarks.each do |bookmark| %>
       <div class="card-trip">
+        <%= image_tag bookmark.movie.poster_url, alt: "movie image", class: 'anthing_you_want' %>
       <div class="card-trip-infos">
           <div>
               <h2><%= bookmark.movie.title %></h2>
+              <p><%= bookmark.movie.overview %></p>
               <p><%= bookmark.comment %></p>
-              <p><%=bookmark.movie.poster_url %></p>
-              <%= image_tag bookmark.movie.poster_url, alt: "movie image", class: 'anthing_you_want' %>
           </div>
               <h2 class="card-trip-pricing"><%= link_to "Delete", bookmark_path(bookmark), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %></h2>
         </div>
