@@ -5,7 +5,7 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)puts “Cleaning up database...”
-
+List.destroy_all
 Movie.destroy_all
 puts "Database cleaned"
 url = "http://tmdb.lewagon.com/movie/top_rated"
@@ -23,31 +23,4 @@ url = "http://tmdb.lewagon.com/movie/top_rated"
     )
   end
 end
-puts “Movies created”
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Message Jun Ukemori
-
-
-
-
-
-
-
-
-
-Shift + Return to add a new line
+puts "Movies created"
