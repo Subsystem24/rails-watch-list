@@ -1,5 +1,4 @@
-
-  cloudinary:
+cloudinary:
   service: Cloudinary
   folder: <%= Rails.env %>
 
