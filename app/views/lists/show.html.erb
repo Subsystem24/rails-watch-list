@@ -14,30 +14,26 @@
   </div>
 </div>
 
-
   <div class="navbar-lewagon">
     <h3><%= @list.name.capitalize %> movie list</h3>
     <%= link_to "Add a movie",  new_list_bookmark_path(@list), class: "btn btn-dark" %>
   </div>
-<%# if @list.photo.attached? %>
-      <%#= cl_image_tag @list.photo.key, alt: "@list image", class: 'anthing_you_want' %>
-    <%# else %>
-      <%#= image_tag "http://loremflickr.com/300/260/movie", alt: "movie image", class: 'anthing_you_want' %>
-    <%# end %>
-  <h2>Movies</h2>
 
+  <h2>Movies</h2>
   <% if !@list.bookmarks.empty? %>
+  <div class="grid">
     <% @list.bookmarks.each do |bookmark| %>
       <div class="card-trip">
         <%= image_tag bookmark.movie.poster_url, alt: "movie image", class: 'anthing_you_want' %>
       <div class="card-trip-infos">
-          <div>
+          <div class="movie-description">
               <h2><%= bookmark.movie.title %></h2>
               <p><%= bookmark.movie.overview %></p>
               <p><%= bookmark.comment %></p>
           </div>
               <h2 class="card-trip-pricing"><%= link_to "Delete", bookmark_path(bookmark), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %></h2>
         </div>
+      </div>
       </div>
     <% end %>
   <% end %>
